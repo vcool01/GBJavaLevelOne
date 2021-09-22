@@ -8,10 +8,9 @@ public class HomeWorkApp {
         printColor();
         compareNumbers();
     }
-// 2. Создайте метод printThreeWords(), который при вызове должен отпечатать в столбец три слова: Orange, Banana, Apple.
-//Orange
-//Banana
-//Apple
+// 2. Создайте метод printThreeWords(), который при вызове должен
+// отпечатать в столбец три слова: Orange, Banana, Apple.
+
    public static void printThreeWords(){
       //6. Методы из пунктов 2-5 вызовите из метода main() и посмотрите корректно ли они работают.
        System.out.println("Orange");
