@@ -1,8 +1,9 @@
 package JavaLevelOne.Lesson1;
 
+
 public class HomeWorkApp {
 //1. Создать пустой проект в IntelliJ IDEA, создать класс HomeWorkApp, и прописать в нем метод main().
-    public static void main(String[] args) {
+    public static void main() {
         printThreeWords();
         checkSumSign();
         printColor();
