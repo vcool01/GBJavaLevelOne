@@ -13,7 +13,7 @@ public class HomeWorkApp {
 // отпечатать в столбец три слова: Orange, Banana, Apple.
 
    public static void printThreeWords(){
-      //6. Методы из пунктов 2-5 вызовите из метода main() и посмотрите корректно ли они работают.
+
        System.out.println("Orange");
        System.out.println("Banana");
        System.out.println("Apple");
