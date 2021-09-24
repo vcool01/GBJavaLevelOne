@@ -13,9 +13,9 @@ public class Homework2 {
 
     //1. Написать метод, принимающий на вход два целых числа и проверяющий, что их сумма лежит в
     // пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false.
-    public static void rangeSum (int ValueA, int ValueB){
+    public static void rangeSum (int valueA, int valueB){
 
-        System.out.println ((ValueA + ValueB) >10  &&  (ValueA + ValueB) < 20);
+        System.out.println ((valueA + valueB) >10  &&  (valueA + valueB) < 20);
     }
 
     //        2. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль,
