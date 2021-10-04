@@ -1,60 +1,64 @@
 package JavaLevelOne.Lesson3;
 
 import java.util.Random;
-import java.util.Scanner;
 
-//        6. * Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
-//        7. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
-//        метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части массива равны.
-//        **Примеры:
-//        checkBalance([2, 2, 2, 1, 2, 2, ||| 10, 1]) → true, т.е. 2 + 2 + 2 + 1 + 2 + 2 = 10 + 1
-//        checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
-//        checkBalance([1, 1, 1, 1, 1, 1, 4 ||| 10]) → true, т.е. 1 + 1 + 1 + 1 + 1 + 1 + 4 = 10
-//        checkBalance([1, 1, 10]) → false
-//        граница показана символами |||, эти символы в массив не входят и не имеют никакого отношения к ИЛИ.
+
+
 public class HomeWork3 {
 
-    public static Scanner scanner = new Scanner(System.in);
     public static Random random = new Random();
 
 
     public static void main(String[] args){
-        // 1.
-        int[] array1 = new int [15];
-        recordDataInArray(array1, 0, 1);
-        printArray(array1);
-        InvertArray(array1);
-        System.out.println("\nInvert array:\n");
-        printArray(array1);
+//        // 1.
+//        System.out.println("\n\nЗадание 1:\n");
+//        int[] array1 = new int [15];
+//        recordDataInArray(array1, 0, 1);
+//        printArray(array1);
+//        InvertArray(array1);
+//        System.out.println("\nInvert array:\n");
+//        printArray(array1);
+//
+//        // 2.
+//        System.out.println("\n\nЗадание 2:\n");
+//        int[] array2 = new int[100];
+//        HundredArray(array2);
+//        printArray(array2);
+//
+//         //3.
+//        //int[] array3 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
+//        int[] array3 = new int [12];
+//        System.out.println("\n\nЗадание 3:\n");
+//        recordDataInArray(array3, 0, 20);
+//        System.out.println("\n\n Array3 :\n");
+//        printArray(array3);
+//        changeArrayInFactor(array3, 6);
+//        System.out.println("\n\nChange array3 :\n");
+//        printArray(array3);
+//
+//         //4.
+//        System.out.println("\n\nЗадание 4:\n");
+//        int[][] array4 = new int [5][5];
+//        squareArray(array4, 1);
+////        int[][] array4 = {{1,1,1},{1,1,1},{1,1,1}};
+//        printArray(array4);
+//
+//        // 5.
+//        System.out.println("\n\nЗадание 5:\n");
+//        int[] array5 = createArray(25, 3);
+//        printArray(array5);
+//
+//        // 6.
+//        System.out.println("\n\nЗадание 6:\n");
+//        int[] array6 = new int [15];
+//        recordDataInArray(array6);
+//        printArray(array6);
+//        minMaxArray(array6);
 
-        // 2.
-        System.out.println("\n\nЗадание 2:\n");
-        int[] array2 = new int[100];
-        HundredArray(array2);
-        printArray(array2);
+        // 7.
+        int[] array7 = {1,1,10};
+        checkBalance(array7);
 
-         //3.
-        //int[] array3 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
-        int[] array3 = new int [12];
-        System.out.println("\n\nЗадание 3:\n");
-        recordDataInArray(array3, 0, 20);
-        System.out.println("\n\n Array3 :\n");
-        printArray(array3);
-        changeArrayInFactor(array3, 6);
-        System.out.println("\n\nChange array3 :\n");
-        printArray(array3);
-
-         //4.
-        System.out.println("\n\nЗадание 4:\n");
-        int[][] array4 = new int [5][5];
-        squareArray(array4, 1);
-//        int[][] array4 = {{1,1,1},{1,1,1},{1,1,1}};
-        printArray(array4);
-
-        // 5.
-        System.out.println("\n\nЗадание 5:\n");
-        int[] array5 = createArray(25, 3);
-        printArray(array5);
     }
 
     // стырено с онлайна
@@ -121,7 +125,7 @@ public class HomeWork3 {
 
     public static void changeArrayInFactor(int[] array, int factor){
         for(int i = 0; i < array.length; i++){
-            if(array[i] < 6){
+            if(array[i] < factor){
                 array[i] = array[i] * 2;
             }
         }
@@ -158,7 +162,50 @@ public class HomeWork3 {
     }
 
 
+//        6. * Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
+    public static void minMaxArray(int[] arrayForSearch){
+        int min = arrayForSearch[0];
+        int max = arrayForSearch[0];
+        for(int i = 1; i < arrayForSearch.length; i++){
+            if(min > arrayForSearch[i]){
+                min = arrayForSearch[i];
+            }else if(max < arrayForSearch[i]){
+                max = arrayForSearch[i];
+            }
 
+        }
+        System.out.println("\nМинимальное значениее: " + min);
+        System.out.println("\nМаксимальное значениее: " + max);
+    }
+
+    //        7. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
+//        метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части массива равны.
+//        **Примеры:
+//        checkBalance([2, 2, 2, 1, 2, 2, ||| 10, 1]) → true, т.е. 2 + 2 + 2 + 1 + 2 + 2 = 10 + 1
+//        checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
+//        checkBalance([1, 1, 1, 1, 1, 1, 4 ||| 10]) → true, т.е. 1 + 1 + 1 + 1 + 1 + 1 + 4 = 10
+//        checkBalance([1, 1, 10]) → false
+//        граница показана символами |||, эти символы в массив не входят и не имеют никакого отношения к ИЛИ.
+
+    public static void checkBalance(int[] arrayForCheck){
+      int sumLeft = 0;
+      int sumRight = 0;
+      do {
+          for (int i = 0; i < arrayForCheck.length; i++){
+              sumLeft += arrayForCheck[i];
+              if(i + 1 < arrayForCheck.length){
+                  for(int j = i + 1; j < arrayForCheck.length; j ++) {
+                      sumRight += arrayForCheck[j];
+                  }
+                  System.out.println(sumLeft == sumRight);
+              }else{
+                  System.out.println(sumLeft == sumRight);
+                  break;
+              }
+
+          }
+      }while(true);
+    }
 }
 
 
