@@ -1,4 +1,4 @@
-package JavaLevelOne.Lesson5;
+package JavaLevelOne.Lesson5.online;
 
 import JavaLevelOne.Lesson5.Point;
 

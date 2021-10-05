@@ -1,4 +1,4 @@
-package JavaLevelOne.Lesson5;
+package JavaLevelOne.Lesson5.online;
 
 /**
  * Created by Aleksandr Gladkov [Anticisco]
