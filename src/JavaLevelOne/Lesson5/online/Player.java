@@ -1,6 +1,6 @@
 package JavaLevelOne.Lesson5.online;
 
-import JavaLevelOne.Lesson5.Point;
+import JavaLevelOne.Lesson5.online.Point;
 
 /**
  * Created by Aleksandr Gladkov [Anticisco]
